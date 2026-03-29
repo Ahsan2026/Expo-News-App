@@ -1,20 +1,37 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+ 
+
+import { NavigationContainer } from "@react-navigation/native";
+import StackNavigator from "./navigation/StackNavigator";
+import { BookmarkProvider } from "./context/BookmarkContext";
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <BookmarkProvider>
+      <NavigationContainer>
+        <StackNavigator />
+      </NavigationContainer>
+    </BookmarkProvider>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+
+
+
+
+
+// import { NavigationContainer } from "@react-navigation/native";
+// import { BookmarkProvider } from "./context/BookmarkContext";
+// import BottomTabs from "./navigation/BottomTabs";
+
+// export default function App() {
+//   return (
+//     <BookmarkProvider>
+//       <NavigationContainer>
+//         <BottomTabs />
+//       </NavigationContainer>
+//     </BookmarkProvider>
+//   );
+// }
+
