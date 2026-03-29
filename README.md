@@ -24,3 +24,8 @@ npx expo start
 After running the command above, you will see a QR Code in your terminal.
 
 Android: Open the Expo Go app and tap "Scan QR Code".
+
+Troubleshooting:
+If you face any navigation or screen errors, try clearing the cache:
+
+npx expo start -c
